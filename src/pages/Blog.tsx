@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from "react"
+﻿import { useEffect, useState, type FormEvent } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { supabase } from "../lib/supabase"
 import { 
@@ -189,17 +189,17 @@ const FloatingShapes = () => (
     <motion.div
       animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
       transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-[#96ACE8]/30 to-[#546DB2]/30 blur-2xl"
+      className="absolute top-20 left-10 w-32 h-32 rounded-full bg-linear-to-br from-[#96ACE8]/30 to-[#546DB2]/30 blur-2xl"
     />
     <motion.div
       animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      className="absolute top-40 right-20 w-40 h-40 rounded-full bg-gradient-to-br from-[#ADBFF2]/30 to-[#8A98C1]/30 blur-2xl"
+      className="absolute top-40 right-20 w-40 h-40 rounded-full bg-linear-to-br from-[#ADBFF2]/30 to-[#8A98C1]/30 blur-2xl"
     />
     <motion.div
       animate={{ y: [0, 15, 0], x: [0, 10, 0] }}
       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      className="absolute bottom-40 left-1/4 w-36 h-36 rounded-full bg-gradient-to-br from-[#C5D2F5]/30 to-[#EEF2FC]/30 blur-2xl"
+      className="absolute bottom-40 left-1/4 w-36 h-36 rounded-full bg-linear-to-br from-[#C5D2F5]/30 to-[#EEF2FC]/30 blur-2xl"
     />
   </div>
 )
@@ -400,7 +400,7 @@ const CommentSection = ({ postId }: CommentSectionProps) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         onSubmit={handleSubmitComment}
-        className="mb-10 p-6 bg-gradient-to-br from-[#EEF2FC] to-[#F6F5FC] rounded-2xl border border-[#C5D2F5]"
+        className="mb-10 p-6 bg-linear-to-br from-[#EEF2FC] to-[#F6F5FC] rounded-2xl border border-[#C5D2F5]"
       >
         <h4 className="text-lg font-semibold text-[#1F2942] mb-4">Leave a Comment</h4>
         <div className="space-y-4">
@@ -423,7 +423,7 @@ const CommentSection = ({ postId }: CommentSectionProps) => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={submittingComment}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#546DB2] to-[#2A3659] text-white font-semibold rounded-xl shadow-lg shadow-[#546DB2]/30 hover:shadow-xl transition-all"
+            className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-[#546DB2] to-[#2A3659] text-white font-semibold rounded-xl shadow-lg shadow-[#546DB2]/30 hover:shadow-xl transition-all"
           >
             <Send className="w-4 h-4" />
             {submittingComment ? "Posting..." : "Post Comment"}
@@ -455,7 +455,7 @@ const CommentSection = ({ postId }: CommentSectionProps) => {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center text-white font-semibold">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center text-white font-semibold">
                       {comment.author.charAt(0)}
                     </div>
                     <div>
@@ -600,7 +600,7 @@ const BlogPostDetail = ({ post, onBack }: BlogPostDetailProps) => {
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1.5 bg-gradient-to-r from-[#EEF2FC] to-[#C5D2F5] text-[#546DB2] text-sm font-medium rounded-full mb-4"
+          className="inline-block px-4 py-1.5 bg-linear-to-r from-[#EEF2FC] to-[#C5D2F5] text-[#546DB2] text-sm font-medium rounded-full mb-4"
         >
           {post.category}
         </motion.span>
@@ -683,7 +683,7 @@ const BlogPostDetail = ({ post, onBack }: BlogPostDetailProps) => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative my-10 pl-8 border-l-4 border-[#546DB2] bg-gradient-to-r from-[#EEF2FC] to-transparent py-6 pr-6 rounded-r-2xl"
+                className="relative my-10 pl-8 border-l-4 border-[#546DB2] bg-linear-to-r from-[#EEF2FC] to-transparent py-6 pr-6 rounded-r-2xl"
               >
                 <Sparkles className="absolute -left-3 -top-3 w-6 h-6 text-[#546DB2]" />
                 <p className="text-xl italic text-[#2A3659] mb-3">{section.quote}</p>
@@ -762,7 +762,7 @@ const BlogPostDetail = ({ post, onBack }: BlogPostDetailProps) => {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                     whileHover={{ y: -5 }}
-                    className="p-6 bg-gradient-to-br from-white to-[#F6F5FC] rounded-2xl border border-[#C5D2F5] shadow-sm hover:shadow-md transition-all"
+                    className="p-6 bg-linear-to-br from-white to-[#F6F5FC] rounded-2xl border border-[#C5D2F5] shadow-sm hover:shadow-md transition-all"
                   >
                     <h4 className="text-lg font-bold text-[#1F2942] mb-2">{adv.title}</h4>
                     <p className="text-[#8A98C1] text-sm leading-relaxed">{adv.description}</p>
@@ -782,7 +782,7 @@ const BlogPostDetail = ({ post, onBack }: BlogPostDetailProps) => {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                     whileHover={{ scale: 1.02 }}
-                    className="p-6 bg-gradient-to-br from-[#EEF2FC] to-[#C5D2F5]/30 rounded-2xl border border-[#ADBFF2]"
+                    className="p-6 bg-linear-to-br from-[#EEF2FC] to-[#C5D2F5]/30 rounded-2xl border border-[#ADBFF2]"
                   >
                     <h4 className="text-lg font-bold text-[#2A3659] mb-2">{tool.name}</h4>
                     <p className="text-[#8A98C1] text-sm leading-relaxed">{tool.description}</p>
@@ -803,7 +803,7 @@ const BlogPostDetail = ({ post, onBack }: BlogPostDetailProps) => {
                     transition={{ delay: i * 0.1 }}
                     className="flex gap-4 p-5 bg-white rounded-xl border border-[#C5D2F5] shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center text-white font-bold">
+                    <div className="shrink-0 w-10 h-10 rounded-full bg-linear-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center text-white font-bold">
                       {step.step}
                     </div>
                     <div>
@@ -894,7 +894,7 @@ export function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F6F5FC] via-[#F6F8FD] to-[#F6F5FC]">
+    <div className="min-h-screen bg-linear-to-b from-[#F6F5FC] via-[#F6F8FD] to-[#F6F5FC]">
       <FloatingShapes />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
@@ -957,7 +957,7 @@ export function Blog() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-center mt-16 p-12 bg-gradient-to-br from-[#EEF2FC] to-[#F6F5FC] rounded-3xl border border-[#C5D2F5]"
+                  className="text-center mt-16 p-12 bg-linear-to-br from-[#EEF2FC] to-[#F6F5FC] rounded-3xl border border-[#C5D2F5]"
                 >
                   <Sparkles className="w-12 h-12 text-[#96ACE8] mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-[#1F2942] mb-2">More Articles Coming Soon</h3>

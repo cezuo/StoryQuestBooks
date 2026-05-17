@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation"
 import { motion, useInView } from "framer-motion"
@@ -115,7 +115,7 @@ function FloatingShapes({ className = "" }: { className?: string }) {
           scale: [1, 1.05, 1]
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-[10%] w-64 h-64 rounded-full bg-gradient-to-br from-[#C5D2F5]/30 to-[#ADBFF2]/30 blur-3xl"
+        className="absolute top-20 left-[10%] w-64 h-64 rounded-full bg-linear-to-br from-[#C5D2F5]/30 to-[#ADBFF2]/30 blur-3xl"
       />
       <motion.div
         animate={{ 
@@ -124,7 +124,7 @@ function FloatingShapes({ className = "" }: { className?: string }) {
           scale: [1, 1.1, 1]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-40 right-[15%] w-72 h-72 rounded-full bg-gradient-to-br from-[#546DB2]/30 to-[#96ACE8]/30 blur-3xl"
+        className="absolute top-40 right-[15%] w-72 h-72 rounded-full bg-linear-to-br from-[#546DB2]/30 to-[#96ACE8]/30 blur-3xl"
       />
       <motion.div
         animate={{ 
@@ -132,7 +132,7 @@ function FloatingShapes({ className = "" }: { className?: string }) {
           x: [0, 15, 0]
         }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-20 left-[20%] w-80 h-80 rounded-full bg-gradient-to-br from-[#8A98C1]/30 to-[#ADBFF2]/30 blur-3xl"
+        className="absolute bottom-20 left-[20%] w-80 h-80 rounded-full bg-linear-to-br from-[#8A98C1]/30 to-[#ADBFF2]/30 blur-3xl"
       />
     </div>
   )
@@ -142,7 +142,7 @@ export default function CreativeCoaching() {
   const containerRef = useRef(null)
   
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-b from-[#F6F5FC] via-white to-[#F6F5FC]">
+    <div ref={containerRef} className="min-h-screen bg-linear-to-b from-[#F6F5FC] via-white to-[#F6F5FC]">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <FloatingShapes />
@@ -202,7 +202,7 @@ export default function CreativeCoaching() {
                 <Link to="/contact">
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-[#546DB2] to-[#2A3659] hover:from-[#2A3659] hover:to-[#1F2942] text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-[#546DB2]/25 hover:shadow-xl hover:shadow-[#546DB2]/30 transition-all duration-300"
+                    className="bg-linear-to-r from-[#546DB2] to-[#2A3659] hover:from-[#2A3659] hover:to-[#1F2942] text-white px-8 py-6 text-lg rounded-full shadow-lg shadow-[#546DB2]/25 hover:shadow-xl hover:shadow-[#546DB2]/30 transition-all duration-300"
                   >
                     Start Creating
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -232,7 +232,7 @@ export default function CreativeCoaching() {
                 <motion.div
                   animate={{ rotate: [3, -3, 3] }}
                   transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -inset-4 bg-gradient-to-br from-[#C5D2F5] via-[#ADBFF2] to-[#96ACE8] rounded-3xl blur-sm"
+                  className="absolute -inset-4 bg-linear-to-br from-[#C5D2F5] via-[#ADBFF2] to-[#96ACE8] rounded-3xl blur-sm"
                 />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
@@ -240,7 +240,7 @@ export default function CreativeCoaching() {
                     alt="Story Quest - The Journey Begins"
                     className="w-full h-auto object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2942]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#1F2942]/20 to-transparent" />
                 </div>
                 
                 {/* Floating badge */}
@@ -250,7 +250,7 @@ export default function CreativeCoaching() {
                   className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#546DB2] to-[#2A3659] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#546DB2] to-[#2A3659] flex items-center justify-center">
                       <Wand2 className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -317,7 +317,7 @@ export default function CreativeCoaching() {
       </section>
 
       {/* Timeline Section */}
-      <section className="relative py-24 bg-gradient-to-b from-[#F6F5FC] to-white overflow-hidden">
+      <section className="relative py-24 bg-linear-to-b from-[#F6F5FC] to-white overflow-hidden">
         <FloatingShapes className="opacity-25" />
 
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
@@ -382,7 +382,7 @@ export default function CreativeCoaching() {
                 className={`group relative ${index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500">
-                  <div className={`${index === 0 ? "aspect-square" : "aspect-[4/5]"}`}>
+                  <div className={`${index === 0 ? "aspect-square" : "aspect-4/5"}`}>
                     <img 
                       src={image.src}
                       alt={image.alt}
@@ -391,7 +391,7 @@ export default function CreativeCoaching() {
                   </div>
                   
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2942]/70 via-[#1F2942]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                  <div className="absolute inset-0 bg-linear-to-t from-[#1F2942]/70 via-[#1F2942]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                     <div>
                       <p className="text-white font-semibold text-lg">{image.caption}</p>
                       <p className="text-white/70 text-sm mt-1">Created with AI</p>
@@ -412,11 +412,11 @@ export default function CreativeCoaching() {
       </section>
 
       {/* What You'll Learn Section */}
-      <section className="relative py-28 bg-gradient-to-br from-[#1F2942] via-[#2A3659] to-[#1F2942] overflow-hidden">
+      <section className="relative py-28 bg-linear-to-br from-[#1F2942] via-[#2A3659] to-[#1F2942] overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#546DB2]/50 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#96ACE8]/50 to-transparent" />
+          <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#546DB2]/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#96ACE8]/50 to-transparent" />
         </div>
         
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
@@ -457,14 +457,14 @@ export default function CreativeCoaching() {
               >
                 <div className="relative flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300">
                   {/* Icon */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center ${skill.color}`}>
+                  <div className={`shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-white/10 to-white/5 flex items-center justify-center ${skill.color}`}>
                     <skill.icon className="w-6 h-6" />
                   </div>
                   
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#96ACE8] flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-[#96ACE8] shrink-0" />
                       <p className="text-white/90 text-lg leading-relaxed">
                         {skill.text}
                       </p>
@@ -478,7 +478,7 @@ export default function CreativeCoaching() {
       </section>
 
       {/* Unique Opportunity Section */}
-      <section className="relative py-28 bg-gradient-to-b from-white to-[#F6F5FC] overflow-hidden">
+      <section className="relative py-28 bg-linear-to-b from-white to-[#F6F5FC] overflow-hidden">
         <FloatingShapes className="opacity-30" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -491,7 +491,7 @@ export default function CreativeCoaching() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative h-[500px]">
+              <div className="relative h-125">
                 {/* Back image */}
                 <motion.div
                   animate={{ rotate: [-3, 3, -3] }}
@@ -522,7 +522,7 @@ export default function CreativeCoaching() {
                 <motion.div
                   animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-gradient-to-br from-[#546DB2] to-[#96ACE8] blur-2xl"
+                  className="absolute bottom-10 right-10 w-32 h-32 rounded-full bg-linear-to-br from-[#546DB2] to-[#96ACE8] blur-2xl"
                 />
               </div>
             </motion.div>
@@ -581,7 +581,7 @@ export default function CreativeCoaching() {
                   <Link to="/contact">
                     <Button 
                       size="lg"
-                      className="bg-gradient-to-r from-[#546DB2] to-[#2A3659] hover:from-[#2A3659] hover:to-[#1F2942] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="bg-linear-to-r from-[#546DB2] to-[#2A3659] hover:from-[#2A3659] hover:to-[#1F2942] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       Get Started Today
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -596,7 +596,7 @@ export default function CreativeCoaching() {
 
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#546DB2] via-[#2A3659] to-[#1F2942]" />
+        <div className="absolute inset-0 bg-linear-to-br from-[#546DB2] via-[#2A3659] to-[#1F2942]" />
         
         {/* Decorative pattern */}
         <div className="absolute inset-0 opacity-10">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import heroImage from "@/assets/Hero_image.png"
@@ -18,7 +18,7 @@ export function Hero() {
           alt="Children's book illustration"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1F2942]/35 via-[#1F2942]/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#1F2942]/35 via-[#1F2942]/10 to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(31,41,66,0.18)_100%)]" />
       </motion.div>
 
@@ -97,7 +97,7 @@ export function Hero() {
             className="flex flex-col items-center gap-2 text-white"
           >
             <span className="text-xs tracking-widest uppercase">Scroll</span>
-            <div className="w-px h-10 bg-gradient-to-b from-white to-transparent" />
+            <div className="w-px h-10 bg-linear-to-b from-white to-transparent" />
           </motion.div>
         </motion.div>
       </div>

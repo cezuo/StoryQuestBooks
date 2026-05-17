@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom"
 import { Hero } from "@/components/Hero"
 import { Button } from "@/components/ui/button"
 import { motion, useScroll, useSpring, useInView } from "framer-motion"
@@ -271,7 +271,7 @@ function FloatingShapes({ className = "" }: FloatingShapesProps) {
           rotate: [0, 5, 0],
         }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-10 w-20 h-20 rounded-full bg-gradient-to-br from-[#96ACE8]/30 to-[#546DB2]/30 blur-xl"
+        className="absolute top-20 left-10 w-20 h-20 rounded-full bg-linear-to-br from-[#96ACE8]/30 to-[#546DB2]/30 blur-xl"
       />
       <motion.div
         animate={{ 
@@ -279,7 +279,7 @@ function FloatingShapes({ className = "" }: FloatingShapesProps) {
           rotate: [0, -5, 0],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-40 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-[#ADBFF2]/30 to-[#8A98C1]/30 blur-xl"
+        className="absolute top-40 right-20 w-32 h-32 rounded-full bg-linear-to-br from-[#ADBFF2]/30 to-[#8A98C1]/30 blur-xl"
       />
       <motion.div
         animate={{ 
@@ -287,7 +287,7 @@ function FloatingShapes({ className = "" }: FloatingShapesProps) {
           x: [0, 10, 0],
         }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-32 left-1/4 w-24 h-24 rounded-full bg-gradient-to-br from-[#C5D2F5]/30 to-[#EEF2FC]/30 blur-xl"
+        className="absolute bottom-32 left-1/4 w-24 h-24 rounded-full bg-linear-to-br from-[#C5D2F5]/30 to-[#EEF2FC]/30 blur-xl"
       />
     </div>
   )
@@ -401,7 +401,7 @@ export default function Home() {
       {/* Progress bar */}
       <motion.div 
         style={{ scaleX }}
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#96ACE8] via-[#546DB2] to-[#2A3659] origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-linear-to-r from-[#96ACE8] via-[#546DB2] to-[#2A3659] origin-left z-50"
       />
       
       <Hero />
@@ -413,7 +413,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <RevealText>
-              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#96ACE8] via-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
+              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#96ACE8] via-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
                 What Story Quest Offers
               </span>
             </RevealText>
@@ -444,7 +444,7 @@ export default function Home() {
                   <motion.div
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
-                    className={`absolute bottom-0 left-0 h-1 rounded-b-3xl bg-gradient-to-r ${feature.color}`}
+                    className={`absolute bottom-0 left-0 h-1 rounded-b-3xl bg-linear-to-r ${feature.color}`}
                   />
                 </motion.div>
               </StaggerCard>
@@ -454,7 +454,7 @@ export default function Home() {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="relative py-32 overflow-hidden bg-gradient-to-b from-[#EEF2FC] via-[#C5D2F5] to-[#ADBFF2]">
+      <section className="relative py-32 overflow-hidden bg-linear-to-b from-[#EEF2FC] via-[#C5D2F5] to-[#ADBFF2]">
         <FloatingShapes />
 
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
@@ -479,7 +479,7 @@ export default function Home() {
                 <motion.div
                   whileHover={{ y: -10, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="group relative p-6 rounded-3xl bg-white border border-[#C5D2F5] shadow-lg shadow-[#C5D2F5]/30 hover:shadow-2xl hover:shadow-[#ADBFF2]/40 transition-all duration-500 flex flex-col items-center justify-center gap-4 min-h-[170px]"
+                  className="group relative p-6 rounded-3xl bg-white border border-[#C5D2F5] shadow-lg shadow-[#C5D2F5]/30 hover:shadow-2xl hover:shadow-[#ADBFF2]/40 transition-all duration-500 flex flex-col items-center justify-center gap-4 min-h-42.5"
                 >
                   <motion.div
                     animate={{ y: [0, -3, 0] }}
@@ -500,7 +500,7 @@ export default function Home() {
                   <motion.div
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
-                    className="absolute bottom-0 left-0 h-1 rounded-b-3xl bg-gradient-to-r from-[#96ACE8] to-[#546DB2]"
+                    className="absolute bottom-0 left-0 h-1 rounded-b-3xl bg-linear-to-r from-[#96ACE8] to-[#546DB2]"
                   />
                 </motion.div>
               </StaggerCard>
@@ -533,14 +533,14 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 200 }}
                   className="relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#96ACE8] via-[#546DB2] to-[#2A3659] rounded-3xl transform rotate-3 scale-105 opacity-20 blur-2xl" />
-                  <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
+                  <div className="absolute inset-0 bg-linear-to-br from-[#96ACE8] via-[#546DB2] to-[#2A3659] rounded-3xl transform rotate-3 scale-105 opacity-20 blur-2xl" />
+                  <div className="relative aspect-4/5 rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jo_ann-Q3dMfC29pfx47FfHdhMlU3pUROQk9R.jpg"
                       alt="Jo Ann - Founder of Story Quest"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1F2942]/20 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-[#1F2942]/20 via-transparent to-transparent" />
                   </div>
                   
                   {/* Floating badge */}
@@ -551,7 +551,7 @@ export default function Home() {
                     transition={{ delay: 0.5, type: "spring" }}
                     className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-[#C5D2F5]"
                   >
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#96ACE8] to-[#546DB2] flex items-center justify-center">
                       <Heart className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -568,7 +568,7 @@ export default function Home() {
             {/* Content */}
             <div className="lg:pl-8">
               <RevealText>
-                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#96ACE8] to-[#546DB2] bg-clip-text text-transparent mb-4">
+                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#96ACE8] to-[#546DB2] bg-clip-text text-transparent mb-4">
                   Why Work With Me
                 </span>
               </RevealText>
@@ -620,7 +620,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className="mt-10"
               >
-                <MagneticButton asChild className="bg-gradient-to-r from-[#546DB2] to-[#2A3659] hover:from-[#8A98C1] hover:to-[#546DB2] text-white font-semibold px-8 py-6 rounded-full text-lg shadow-lg shadow-[#546DB2]/25">
+                <MagneticButton asChild className="bg-linear-to-r from-[#546DB2] to-[#2A3659] hover:from-[#8A98C1] hover:to-[#546DB2] text-white font-semibold px-8 py-6 rounded-full text-lg shadow-lg shadow-[#546DB2]/25">
                   <Link to="/contact" className="flex items-center gap-3">
                     Start Your Journey
                     <ArrowRight className="w-5 h-5" />
@@ -633,14 +633,14 @@ export default function Home() {
       </section>
 
       {/* Published Books - Horizontal Scroll */}
-      <section className="relative py-32 bg-gradient-to-br from-[#EEF2FC] via-[#F6F5FC] to-[#EEF2FC] overflow-hidden">
+      <section className="relative py-32 bg-linear-to-br from-[#EEF2FC] via-[#F6F5FC] to-[#EEF2FC] overflow-hidden">
         <FloatingShapes className="opacity-50" />
         
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-16">
               <RevealText>
-                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#96ACE8] to-[#546DB2] bg-clip-text text-transparent mb-4">
+                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#96ACE8] to-[#546DB2] bg-clip-text text-transparent mb-4">
                   Published Works
                 </span>
               </RevealText>
@@ -689,7 +689,7 @@ export default function Home() {
                     style={{ perspective: "1000px" }}
                   >
                     <div className="relative">
-                      <div className={`absolute -inset-4 bg-gradient-to-br ${book.color} rounded-3xl opacity-0 group-hover:opacity-30 blur-2xl transition-opacity duration-500`} />
+                      <div className={`absolute -inset-4 bg-linear-to-br ${book.color} rounded-3xl opacity-0 group-hover:opacity-30 blur-2xl transition-opacity duration-500`} />
                       
                       <div className="relative bg-white rounded-2xl p-4 shadow-xl shadow-[#C5D2F5]/30 group-hover:shadow-2xl group-hover:shadow-[#ADBFF2]/50 transition-all duration-500 border border-[#C5D2F5]">
                         <div className="relative aspect-square rounded-xl overflow-hidden mb-4">
@@ -705,7 +705,7 @@ export default function Home() {
                             initial={{ x: "-100%", opacity: 0 }}
                             whileHover={{ x: "100%", opacity: 0.3 }}
                             transition={{ duration: 0.6 }}
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12"
+                            className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent skew-x-12"
                           />
                         </div>
                         
@@ -727,7 +727,7 @@ export default function Home() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
-                          className={`mt-4 w-full flex items-center justify-center gap-2 bg-gradient-to-r ${book.color} text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
+                          className={`mt-4 w-full flex items-center justify-center gap-2 bg-linear-to-r ${book.color} text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
                         >
                           <ShoppingCart className="w-4 h-4" />
                           Buy on Amazon
@@ -751,8 +751,8 @@ export default function Home() {
               ))}
             </div>
             
-            <div className="absolute left-0 top-0 bottom-8 w-20 bg-gradient-to-r from-[#EEF2FC] to-transparent pointer-events-none z-10" />
-            <div className="absolute right-0 top-0 bottom-8 w-20 bg-gradient-to-l from-[#EEF2FC] to-transparent pointer-events-none z-10" />
+            <div className="absolute left-0 top-0 bottom-8 w-20 bg-linear-to-r from-[#EEF2FC] to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 bottom-8 w-20 bg-linear-to-l from-[#EEF2FC] to-transparent pointer-events-none z-10" />
           </div>
           
           <motion.div
@@ -774,7 +774,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <RevealText>
-                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
+                <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
                   Illustration Options
                 </span>
               </RevealText>
@@ -803,7 +803,7 @@ export default function Home() {
                       whileHover={{ x: 10, scale: 1.02 }}
                       className="group flex items-start gap-5 p-6 rounded-2xl bg-[#EEF2FC] hover:bg-white hover:shadow-xl hover:shadow-[#C5D2F5]/30 transition-all duration-300 border border-transparent hover:border-[#C5D2F5]"
                     >
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${option.gradient} flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${option.gradient} flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <option.icon className="w-7 h-7 text-white" />
                       </div>
                       <div>
@@ -832,7 +832,7 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 200 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#96ACE8] to-[#546DB2] rounded-3xl transform rotate-6 scale-105 opacity-20 blur-2xl" />
+                <div className="absolute inset-0 bg-linear-to-br from-[#96ACE8] to-[#546DB2] rounded-3xl transform rotate-6 scale-105 opacity-20 blur-2xl" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-0rxUrGyrrClKgjEqk3meLIlzAfVHAg.jpeg"
@@ -847,13 +847,13 @@ export default function Home() {
       </section>
 
       {/* Illustration Gallery Section */}
-      <section className="relative py-32 bg-gradient-to-br from-[#1F2942] via-[#2A3659] to-[#333948] overflow-hidden">
+      <section className="relative py-32 bg-linear-to-br from-[#1F2942] via-[#2A3659] to-[#333948] overflow-hidden">
         <FloatingShapes className="opacity-30" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <RevealText>
-              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#96ACE8] to-[#ADBFF2] bg-clip-text text-transparent mb-4">
+              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#96ACE8] to-[#ADBFF2] bg-clip-text text-transparent mb-4">
                 Art Gallery
               </span>
             </RevealText>
@@ -897,7 +897,7 @@ export default function Home() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 bg-gradient-to-t from-[#1F2942]/70 via-[#1F2942]/30 to-transparent flex items-end p-4 md:p-6"
+                    className="absolute inset-0 bg-linear-to-t from-[#1F2942]/70 via-[#1F2942]/30 to-transparent flex items-end p-4 md:p-6"
                   >
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
@@ -926,7 +926,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <RevealText>
-              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-gradient-to-r from-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
+              <span className="inline-block text-sm font-semibold tracking-[0.3em] uppercase bg-linear-to-r from-[#546DB2] to-[#2A3659] bg-clip-text text-transparent mb-4">
                 Coaching Packages
               </span>
             </RevealText>
@@ -956,14 +956,14 @@ export default function Home() {
                 >
                   {pkg.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-gradient-to-r from-[#546DB2] to-[#2A3659] text-white text-sm font-medium rounded-full">
+                      <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-linear-to-r from-[#546DB2] to-[#2A3659] text-white text-sm font-medium rounded-full">
                         <Crown className="w-4 h-4" />
                         Most Popular
                       </span>
                     </div>
                   )}
 
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${pkg.gradient} flex items-center justify-center mb-6 shadow-lg`}>
+                  <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${pkg.gradient} flex items-center justify-center mb-6 shadow-lg`}>
                     <Sparkles className="w-7 h-7 text-white" />
                   </div>
 
@@ -993,7 +993,7 @@ export default function Home() {
                   <motion.div
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
-                    className={`absolute bottom-0 left-0 h-1 rounded-b-3xl bg-gradient-to-r ${pkg.gradient}`}
+                    className={`absolute bottom-0 left-0 h-1 rounded-b-3xl bg-linear-to-r ${pkg.gradient}`}
                   />
                 </motion.div>
               </StaggerCard>
@@ -1007,7 +1007,7 @@ export default function Home() {
             transition={{ delay: 0.5 }}
             className="text-center mt-16"
           >
-            <MagneticButton asChild className="bg-gradient-to-r from-[#546DB2] to-[#2A3659] hover:from-[#8A98C1] hover:to-[#546DB2] text-white font-semibold px-8 py-6 rounded-full text-lg shadow-lg shadow-[#546DB2]/25">
+            <MagneticButton asChild className="bg-linear-to-r from-[#546DB2] to-[#2A3659] hover:from-[#8A98C1] hover:to-[#546DB2] text-white font-semibold px-8 py-6 rounded-full text-lg shadow-lg shadow-[#546DB2]/25">
               <Link to="/contact" className="flex items-center gap-3">
                 Book a Free Consultation
                 <ArrowRight className="w-5 h-5" />
@@ -1018,17 +1018,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 bg-gradient-to-br from-[#2A3659] via-[#1F2942] to-[#333948] overflow-hidden">
+      <section className="relative py-24 bg-linear-to-br from-[#2A3659] via-[#1F2942] to-[#333948] overflow-hidden">
         <div className="absolute inset-0">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] border border-[#546DB2]/10 rounded-full"
+            className="absolute -top-1/2 -right-1/4 w-200 h-200 border border-[#546DB2]/10 rounded-full"
           />
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-            className="absolute -bottom-1/2 -left-1/4 w-[600px] h-[600px] border border-[#8A98C1]/10 rounded-full"
+            className="absolute -bottom-1/2 -left-1/4 w-150 h-150 border border-[#8A98C1]/10 rounded-full"
           />
         </div>
         
