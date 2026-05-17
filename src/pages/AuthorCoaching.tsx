@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation"
-import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import type { Variants } from "framer-motion"
 import { useRef } from "react"
 import timelineImage from "@/assets/timeline.png"
 import { 
@@ -21,12 +22,22 @@ import {
 } from "lucide-react"
 
 // Animation variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
 }
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -129,13 +140,7 @@ function FloatingShapes({ className = "" }: { className?: string }) {
 
 export default function CreativeCoaching() {
   const containerRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  })
   
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
-
   return (
     <div ref={containerRef} className="min-h-screen bg-gradient-to-b from-[#F6F5FC] via-white to-[#F6F5FC]">
       {/* Hero Section */}
